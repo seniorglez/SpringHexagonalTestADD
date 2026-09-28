@@ -71,7 +71,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
   - Done when: `HexagonalArchitectureTest` is green, the JaCoCo check passes, and `./mvnw verify` is
     green with no test skipped. Remove any dead code and any unused class.
 
-- [ ] **T10** — Traceability report
+- [x] **T10** — Traceability report
   - Requirements: all
   - Files: `docs/traceability.md`
   - Done when: the report contains a table mapping every REQ/NFR to the concrete test classes and
