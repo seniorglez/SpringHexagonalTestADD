@@ -36,7 +36,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
     verifies that the query values reach the port unchanged, that the selector's winner is returned,
     and that `PriceNotFoundException` carrying the query context is thrown when nothing applies.
 
-- [ ] **T05** — Persistence adapter
+- [x] **T05** — Persistence adapter
   - Requirements: REQ-02, REQ-10, NFR-02
   - Files: everything in `infrastructure/adapter/out/persistence`, plus `application.properties`
     (settings from `04-design.md`)
