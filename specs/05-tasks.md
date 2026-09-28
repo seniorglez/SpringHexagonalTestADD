@@ -15,7 +15,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
     `isApplicableAt` at start (inclusive), end (inclusive), one second before start and one second
     after end.
 
-- [ ] **T02** — Selection policy `PriceSelector`
+- [x] **T02** — Selection policy `PriceSelector`
   - Requirements: REQ-03, REQ-04
   - Files: `domain/service/PriceSelector`
   - Done when: `PriceSelectorTest` covers no candidates, a single candidate, candidates not applicable
