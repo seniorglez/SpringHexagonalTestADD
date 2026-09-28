@@ -22,7 +22,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
     at the moment, highest priority wins, the priority tie resolved by the highest price list, and
     the five worked examples of `02-domain.md` built as in-memory `Price` objects inside the test.
 
-- [ ] **T03** — Domain exception, application ports and query
+- [x] **T03** — Domain exception, application ports and query
   - Requirements: REQ-05, NFR-01
   - Files: `domain/exception/PriceNotFoundException`, `application/port/in/FindApplicablePriceUseCase`,
     `application/port/in/FindApplicablePriceQuery`, `application/port/out/LoadPricesPort`
