@@ -29,7 +29,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
   - Done when: `FindApplicablePriceQueryTest` covers its invariants, and `PriceNotFoundException`
     exposes brand, product and date (tested).
 
-- [ ] **T04** — Application service `FindApplicablePriceService`
+- [x] **T04** — Application service `FindApplicablePriceService`
   - Requirements: REQ-01, REQ-03, REQ-05
   - Files: `application/service/FindApplicablePriceService`
   - Done when: `FindApplicablePriceServiceTest`, using a hand-written in-memory `LoadPricesPort`,
