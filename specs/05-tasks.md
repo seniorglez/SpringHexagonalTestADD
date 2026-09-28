@@ -8,7 +8,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
 
 ---
 
-- [ ] **T01** — Domain model `Price` with invariants and `isApplicableAt`
+- [x] **T01** — Domain model `Price` with invariants and `isApplicableAt`
   - Requirements: REQ-02, NFR-02
   - Files: `domain/model/Price`
   - Done when: `PriceTest` covers every invariant in `02-domain.md` (one test per rejected value) and
