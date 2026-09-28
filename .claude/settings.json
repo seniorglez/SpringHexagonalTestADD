@@ -1,0 +1,60 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./mvnw:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Edit(src/main/**)",
+      "Edit(src/test/**)",
+      "Edit(specs/05-tasks.md)",
+      "Edit(specs/open-questions.md)",
+      "Edit(docs/**)"
+    ],
+    "deny": [
+      "Edit(pom.xml)",
+      "Edit(mvnw)",
+      "Edit(mvnw.cmd)",
+      "Edit(.mvn/**)",
+      "Edit(.gitignore)",
+      "Edit(CLAUDE.md)",
+      "Edit(README.md)",
+      "Edit(.claude/**)",
+      "Edit(scripts/**)",
+      "Edit(baseline/**)",
+      "Edit(specs/00-constitution.md)",
+      "Edit(specs/01-requirements.md)",
+      "Edit(specs/02-domain.md)",
+      "Edit(specs/03-api-contract.md)",
+      "Edit(specs/04-design.md)",
+      "Edit(src/main/resources/schema.sql)",
+      "Edit(src/main/resources/data.sql)",
+      "Edit(src/main/java/com/seniorglez/prices/PricesApplication.java)",
+      "Edit(src/test/java/com/seniorglez/prices/acceptance/**)",
+      "Edit(src/test/java/com/seniorglez/prices/architecture/**)",
+      "Bash(git tag:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Bash(git commit --amend:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(rm -rf:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/verify-gate.sh",
+            "timeout": 900
+          }
+        ]
+      }
+    ]
+  }
+}

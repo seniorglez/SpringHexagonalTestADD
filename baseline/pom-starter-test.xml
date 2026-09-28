@@ -1,0 +1,6 @@
+		<!-- Added by scripts/bootstrap.sh only if the starter did not include it (JSON-path, AssertJ, JUnit). -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
