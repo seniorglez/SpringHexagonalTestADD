@@ -51,7 +51,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
   - Done when: a test proves that the Spring context exposes a `FindApplicablePriceUseCase` bean
     backed by `FindApplicablePriceService`, and the generated `PricesApplicationTests` stays green.
 
-- [ ] **T07** — REST adapter, happy path
+- [x] **T07** — REST adapter, happy path
   - Requirements: REQ-01, REQ-09, NFR-02
   - Files: `PriceController`, `PriceResponse`
   - Done when: `PriceControllerTest` checks the JSON shape and values of a 200 response, and the
