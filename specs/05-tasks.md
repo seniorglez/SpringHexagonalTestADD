@@ -58,7 +58,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
     frozen acceptance tests `returnsApplicablePriceForStatementScenarios` and
     `appliesInclusiveValidityWindows` are green.
 
-- [ ] **T08** — Error handling
+- [x] **T08** — Error handling
   - Requirements: REQ-05, REQ-06, REQ-07, REQ-08
   - Files: `RestExceptionHandler`
   - Done when: `PriceControllerTest` also covers 404, the 400 families, 405 with `Allow`, and a 500
