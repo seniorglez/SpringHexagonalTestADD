@@ -45,10 +45,6 @@ public class PriceJpaEntity {
     protected PriceJpaEntity() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
     public Long getBrandId() {
         return brandId;
     }

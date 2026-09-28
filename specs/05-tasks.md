@@ -65,7 +65,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
     whose body does not contain the message of the thrown exception (for example, a fake use case
     throwing `new RuntimeException("secret-internal-detail")`). **All** frozen acceptance tests are green.
 
-- [ ] **T09** — Full verification
+- [x] **T09** — Full verification
   - Requirements: NFR-01, NFR-03
   - Files: none expected. Fix whatever the checks reveal.
   - Done when: `HexagonalArchitectureTest` is green, the JaCoCo check passes, and `./mvnw verify` is
