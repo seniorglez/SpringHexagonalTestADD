@@ -45,7 +45,7 @@ Legend: *Done when* lists the tests that must exist and be green, in addition to
     that the boundaries 2020-06-14T18:30:00 and 2020-06-14T18:30:01 behave inclusively, that an
     unknown product or brand gives an empty list, and that mapping keeps `25.45`/`EUR` exactly.
 
-- [ ] **T06** — Wiring `ApplicationConfig`
+- [x] **T06** — Wiring `ApplicationConfig`
   - Requirements: NFR-01
   - Files: `infrastructure/config/ApplicationConfig`
   - Done when: a test proves that the Spring context exposes a `FindApplicablePriceUseCase` bean
