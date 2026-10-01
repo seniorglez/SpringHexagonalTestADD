@@ -44,27 +44,6 @@ four seed rows and five scenarios to test (product 35455, brand 1, on 14, 15 and
 The boundary is a git tag, `baseline`. Everything before it is human work. Everything after it
 is AI work, one commit per task.
 
-## What I learned from my first attempt
-
-Re-reading the 2024 code while extracting the specs surfaced several things. Each became an explicit
-decision in the specs instead of something left to chance:
-
-- **Date format inconsistency.** The README documented ISO-8601 (`2020-06-14T10:00:00`), but the
-  controller parsed `yyyy-MM-dd HH:mm:ss`. Decision D-02 fixes ISO-8601 in both directions, and a
-  test rejects the old format.
-- **`Float` for money.** It is now `BigDecimal` end to end (NFR-02).
-- **Undefined priority ties.** The statement is silent on ties. Decision D-01 makes them
-  deterministic: the highest price list wins.
-- **A fragile seed script.** It declared foreign keys to tables that did not exist, and only worked
-  because Hibernate happened to create the table first. The schema is now explicit and Hibernate
-  only *validates* it.
-- **A "use case" unit test that depended on infrastructure.** It wired the real JPA adapter with a
-  mocked repository. The design now tests the application layer against a fake port.
-- **Weak end-to-end checks.** Only the amount was asserted. The acceptance tests now check every
-  field, including which price list won, and cover the inclusive window boundaries.
-- **Naming.** The outbound port was called `PriceService` and lived in `domain/service`. There was
-  also a typo in the package name (`infraestructure`). Ports now live in `application/port/{in,out}`.
-
 ## Repository map
 
 ```
@@ -146,12 +125,3 @@ curl "http://localhost:8080/prices?applicationDate=2020-06-14T16:00:00&productId
 
 Then read `docs/traceability.md` (every requirement mapped to the tests that verify it) and
 `specs/open-questions.md`.
-
-## Known limitations
-
-- The gate only runs the full build when every task is ticked. Between tasks, the "no regressions"
-  rule depends on the workflow in `CLAUDE.md` and on per-task commits that are easy to review.
-- REQ-04 (ties) and REQ-08 (500 errors) cannot be exercised black-box with the given seed data. They
-  are covered by unit tests the AI writes. Those tests are reviewed, not frozen.
-- The frozen tests fix the *what*, not the *how*. Code quality beyond the architecture rules still
-  needs a human review of the diff.
